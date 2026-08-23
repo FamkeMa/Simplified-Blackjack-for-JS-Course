@@ -22,11 +22,10 @@ p {
     margin: auto;
     background-image: url("images/table.png");
     background-size: cover;
-    width: 300px;
+    width: 350px;
     height: 450px;
     padding: 40px;
     border-radius: 15px;
-
 }
 
 #message-el {
@@ -37,17 +36,19 @@ button {
     color: #076531;
     font-weight: bold;
     font-size: 18px;
-    margin: 4px;
-    padding: 5px;
+    margin: 5px;
+    padding: 8px;
     width: 160px;
     background-color: goldenrod;
     border: 1px solid goldenrod;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 1px 1px 2px black;
 }
 
 button:hover {
     background-color: #9a720d;
+    font-weight: bolder;
+    padding: 6px;
     box-shadow: 1px 1px 4px black;
     border: 1px solid goldenrod;
 }

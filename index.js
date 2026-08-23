@@ -8,9 +8,10 @@ let messageEl = document.getElementById("message-el")
 let cardsEl = document.getElementById("cards-el")
 let sumEl = document.getElementById("sum-el")
 let playerEl = document.getElementById("player-el")
+let startBtn = document.getElementById("start-btn")
 
 let player = {
-    name: "Famke",
+    name: "Player",
     chips: 200
 }
 
@@ -30,8 +31,10 @@ function getRandomCard() {
 function startGame() {
     isAlive = true
     hasBlackJack = false
+
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
+    
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
 
@@ -41,6 +44,8 @@ function startGame() {
         message = "You're out of chips..."
         messageEl.textContent = message
     }
+
+    startBtn.textContent = "RESTART"
 }
 
 function renderGame() {
@@ -52,11 +57,11 @@ function renderGame() {
     sumEl.textContent = "Sum: " + sum
 
     if (sum <= 20) {
-        message = "Do you want to draw a new card?"
+        message = "Draw new card or restart"
     } else if (sum === 21) {
         message = "You've got Blackjack!"
         hasBlackJack = true
-        player.chips += 20
+        player.chips += 40
         playerEl.textContent = player.name + ": $" + player.chips
     } else {
         message = "You're out of the game!"
